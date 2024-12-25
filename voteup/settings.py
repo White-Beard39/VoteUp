@@ -30,7 +30,7 @@ SECRET_KEY = "django-insecure-i%9^c4l#26eh*c6fpznu1=p!2&t7thz!3j4qk@lzufzd!jq3!=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS").split(";")
 
 
 # Application definition
@@ -144,4 +144,3 @@ REST_FRAMEWORK = {
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
-
