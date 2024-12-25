@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to VoteUp</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff5f6d, #ffc371, #24c6dc);
+            background-size: 300% 300%;
+            animation: gradientAnimation 14s ease infinite;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #e43c4a;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px #ffb3b3;
+        }
+
+        h2 {
+            font-size: 1rem;
+            color: #6c757d;
+            font-weight: normal;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        ul li img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .footer span {
+            color: #ff5f6d;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            ul li {
+                font-size: 1rem;
+            }
+
+            ul li img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to VoteUp</h1>
+        <h2>Where you vote with Fun 🎉</h2>
+        <p>
+            Transform your opinions into action with a modern, easy-to-use platform designed for everyone.
+        </p>
+        <ul>
+            <li>
+                <img src="https://img.icons8.com/color/48/user-male-circle.png" alt="Create account icon">
+                <span>Create your account effortlessly in just a few steps.</span>
+            </li>
+            <li>
+                <img src="https://img.icons8.com/color/48/clipboard.png" alt="Pick category icon">
+                <span>Pick the category you’re passionate about.</span>
+            </li>
+            <li>
+                <img src="https://img.icons8.com/color/48/trophy.png" alt="Cast vote icon">
+                <span>Cast your vote and see the results live!</span>
+            </li>
+        </ul>
+        <p class="footer">Made with 💙 by VoteUp Team. Let's make every vote count!</p>
+    </div>
+</body>
+
+</html>

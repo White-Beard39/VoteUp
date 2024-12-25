@@ -14,6 +14,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework_simplejwt.views import (
@@ -22,9 +23,16 @@ from rest_framework_simplejwt.views import (
 )
 from django.conf import settings
 from django.conf.urls.static import static
+from django.shortcuts import render
+
+
+def welcome_view(request):
+    return render(request, "welcome.html")
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("", welcome_view, name="welcome"),
     path("api-auth/", include("rest_framework.urls")),
     # path('authentic/', include('authentic.urls')),
     path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
