@@ -3,14 +3,16 @@ from primary.models import Category, Entity, Voted
 
 
 @admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin) :
+class CategoryAdmin(admin.ModelAdmin):
     list_display = ["id", "name"]
 
+
 @admin.register(Entity)
-class EntityAdmin(admin.ModelAdmin) :
-    list_display = ["id", "name", "image"]
+class EntityAdmin(admin.ModelAdmin):
+    list_display = ["id", "name", "image_url"]
     raw_id_fields = ("category",)
 
+
 @admin.register(Voted)
-class VotedAdmin(admin.ModelAdmin) :
+class VotedAdmin(admin.ModelAdmin):
     raw_id_fields = ("user", "category")
